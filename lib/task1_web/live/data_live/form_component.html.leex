@@ -1,0 +1,17 @@
+
+<form  phx-submit="save">
+  <label>Name</label>
+  <%= text_input :data, :name, value: (if assigns[:name] do @name  else "" end )  %>
+  <label> Email</label>
+  <%= text_input :data, :email, value: (if assigns[:email] do @email  else "" end ) %>
+  <label> Nickname</label>
+  <%= text_input :data, :nick_name, value: (if assigns[:nickname] do @nickname  else "" end )%>
+  <label>Mark of Identification</label>
+  <%= text_input :data, :identity_mark, value: (if assigns[:mark] do @mark  else "" end )%>
+  <%= if @edit=="" do %>
+  <%= submit "Submit", phx_disable_with: "Submitting..." %>
+  <% else %>
+  <%= submit "Update", phx_disable_with: "Updating..." %>
+  <%end%>
+</form>
+

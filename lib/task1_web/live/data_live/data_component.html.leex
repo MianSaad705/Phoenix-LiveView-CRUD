@@ -1,0 +1,21 @@
+
+<tr>
+<td><%= @user_name%></td>
+<td><%= @email %></td>
+<td><%= @nick_name %></td>
+<td><%= @mark %></td>
+<td><button phx-click="handle_edit"
+            phx-value-id= "<%= @id %>"
+                    phx-value-name= "<%= @user_name %>"
+            phx-value-email= "<%= @email %>"
+                    phx-value-nick_name= "<%= @nick_name %>"
+            phx-value-mark= "<%= @mark %>">
+    Edit
+</button>
+</td>
+    <td><button phx-click="handle_delete"
+                phx-value-id= "<%= @id %>">
+        delete
+    </button>
+    </td>
+</tr>

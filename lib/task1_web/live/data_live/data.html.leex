@@ -1,0 +1,18 @@
+
+<button phx-click="add_new" >Add New</button>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Nick_Name</th>
+        <th>Mark of Identification</th>
+    </tr>
+<%= for data <- @data do %>
+<%= live_component @socket, Task1Web.DataComponent,
+id: data.id,
+email: data.email,
+user_name: data.name,
+nick_name: data.identity.nick_name,
+mark: data.identity.identity_mark %>
+<% end %>
+</table>

@@ -1,0 +1,14 @@
+<h6>Saving Data In Tables Using Forms</h6>
+
+
+<%= form_for @conn, Routes.page_path(@conn, :create), [as: :data], fn f -> %>
+  <label>Name</label>
+  <%= text_input f, :name %>
+  <label> Email</label>
+  <%= text_input f, :email%>
+  <label> Nickname</label>
+  <%= text_input f, :nick_name%>
+  <label>Mark of Identification</label>
+  <%= text_input f, :identity_mark%>
+  <%= submit "Submit" %>
+<% end %>
